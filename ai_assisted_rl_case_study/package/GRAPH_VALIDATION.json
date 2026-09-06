@@ -1,0 +1,413 @@
+{
+  "status": "PASS",
+  "historical_regenerated_count": 24,
+  "historical_png_byte_matches": 24,
+  "smoke_generated_count": 24,
+  "smoke_graphs_per_variant": 6,
+  "failed_graph_ids": [],
+  "axis_series_nonempty_and_finite": "PASS",
+  "historical_graphs": [
+    {
+      "graph_id": "G01",
+      "purpose": "B0/L1/L2/L3 final normalized PnL by seed",
+      "axis": {
+        "x": "variant and seed",
+        "y": "mean normalized PnL"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "144 fixed development episodes per variant/seed",
+      "source_rows": 12,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G02",
+      "purpose": "Mean normalized PnL by explicit-memory depth",
+      "axis": {
+        "x": "explicit-memory depth",
+        "y": "mean_normalized_pnl"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "432 outcomes per variant",
+      "source_rows": 4,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G03",
+      "purpose": "Median normalized PnL by explicit-memory depth",
+      "axis": {
+        "x": "explicit-memory depth",
+        "y": "median_normalized_pnl"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "432 outcomes per variant",
+      "source_rows": 4,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G04",
+      "purpose": "Tail-risk comparison",
+      "axis": {
+        "x": "tail metric",
+        "y": "normalized PnL"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "432 outcomes per variant; worst-tail count 22",
+      "source_rows": 16,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G05",
+      "purpose": "Checkpoint reward/PnL progression",
+      "axis": {
+        "x": "optimizer update",
+        "y": "3-seed mean normalized PnL"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "fixed 48-episode 2026-06-30 sentinel per seed/checkpoint for B0/L1 comparability",
+      "source_rows": 24,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G06",
+      "purpose": "Huber loss progression",
+      "axis": {
+        "x": "optimizer update",
+        "y": "loss_mean (log scale)"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "128 replay transitions/update; 3 seeds",
+      "source_rows": 160,
+      "smoothing": "non-overlapping 50-update arithmetic mean"
+    },
+    {
+      "graph_id": "G07",
+      "purpose": "Absolute TD-error progression",
+      "axis": {
+        "x": "optimizer update",
+        "y": "td_abs_mean (log scale)"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "128 replay transitions/update; 3 seeds",
+      "source_rows": 160,
+      "smoothing": "non-overlapping 50-update arithmetic mean"
+    },
+    {
+      "graph_id": "G08",
+      "purpose": "Entries per episode",
+      "axis": {
+        "x": "variant",
+        "y": "entries/episode"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "432 episodes per variant",
+      "source_rows": 4,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G09",
+      "purpose": "Mean and median holding time",
+      "axis": {
+        "x": "variant",
+        "y": "holding seconds"
+      },
+      "series": [
+        "mean",
+        "median"
+      ],
+      "denominator": "timestamp-completed trades; denominator in source",
+      "source_rows": 8,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G10",
+      "purpose": "Five-second Close rate",
+      "axis": {
+        "x": "variant",
+        "y": "rate"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "successful normal completed trades; denominator in source",
+      "source_rows": 4,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G11",
+      "purpose": "Close-to-re-entry CDF",
+      "axis": {
+        "x": "threshold seconds",
+        "y": "CDF"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "successful normal Close events",
+      "source_rows": 32,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G12",
+      "purpose": "Entry rate by same-session time since Close",
+      "axis": {
+        "x": "same-session seconds since Close",
+        "y": "entry_rate"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "Flat ordinary decisions before next successful Entry; Long/Short pooled",
+      "source_rows": 96,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G13",
+      "purpose": "Same-side re-entry rate by same-session time since Close",
+      "axis": {
+        "x": "same-session seconds since Close",
+        "y": "same_side_reentry_rate"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "Flat ordinary decisions before next successful Entry; Long/Short pooled",
+      "source_rows": 96,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G14",
+      "purpose": "Reversal rate by same-session time since Close",
+      "axis": {
+        "x": "same-session seconds since Close",
+        "y": "reversal_rate"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "Flat ordinary decisions before next successful Entry; Long/Short pooled",
+      "source_rows": 96,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G15",
+      "purpose": "Hold rate by same-session time since Close",
+      "axis": {
+        "x": "same-session seconds since Close",
+        "y": "hold_rate"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "Flat ordinary decisions before next successful Entry; Long/Short pooled",
+      "source_rows": 96,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G16",
+      "purpose": "Window-drop re-entry comparison",
+      "axis": {
+        "x": "candidate expected window drop",
+        "y": "same-side re-entry rate"
+      },
+      "series": [
+        "last context-present decision",
+        "first context-dropped decision"
+      ],
+      "denominator": "same-session Flat decisions before next successful Entry",
+      "source_rows": 6,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G17",
+      "purpose": "Q Entry-vs-Hold advantage by same-session time since Close",
+      "axis": {
+        "x": "same-session seconds since Close",
+        "y": "entry_advantage_mean"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "Flat ordinary decisions before next successful Entry; Long/Short pooled",
+      "source_rows": 96,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G18",
+      "purpose": "Action distribution",
+      "axis": {
+        "x": "variant",
+        "y": "policy action rate"
+      },
+      "series": [
+        "Hold",
+        "Buy",
+        "Sell"
+      ],
+      "denominator": "policy-eligible decisions",
+      "source_rows": 12,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G19",
+      "purpose": "Position-conditioned action distribution",
+      "axis": {
+        "x": "semantic action by position-before",
+        "y": "conditional rate"
+      },
+      "series": [
+        "B0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "position-before decision count; denominator in source",
+      "source_rows": 36,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G20",
+      "purpose": "History availability and invariant QC",
+      "axis": {
+        "x": "candidate history lag",
+        "y": "availability rate"
+      },
+      "series": [
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "denominator": "development state count; invariant/cross-session counts in source",
+      "source_rows": 6,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G21",
+      "purpose": "Seed delta comparison versus B0 and L1",
+      "axis": {
+        "x": "candidate/seed/comparator",
+        "y": "paired mean delta"
+      },
+      "series": [
+        "L2",
+        "L3"
+      ],
+      "denominator": "144 exactly paired episodes",
+      "source_rows": 12,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "G22",
+      "purpose": "Memory-depth economic and behavior summary",
+      "axis": {
+        "x": "explicit-memory depth",
+        "y": "economic/behavior metric"
+      },
+      "series": [
+        "mean normalized PnL",
+        "entries/episode",
+        "mean holding seconds"
+      ],
+      "denominator": "432 outcomes/variant and policy-dependent behavior denominators",
+      "source_rows": 4,
+      "smoothing": "none"
+    },
+    {
+      "graph_id": "R01",
+      "purpose": "Phase-I reward progression",
+      "axis": {
+        "x": "optimizer update",
+        "y": "mean cumulative normalized reward"
+      },
+      "series": [
+        "baseline/candidate ×3 seeds",
+        "two 3-seed means"
+      ],
+      "denominator": "48 fixed development episodes/seed/checkpoint",
+      "source_name": "diagnostic_reward_progression_by_checkpoint.csv"
+    },
+    {
+      "graph_id": "R04",
+      "purpose": "Phase-I DDQN re-entry after Close",
+      "axis": {
+        "x": "same-session seconds since Close",
+        "y": "selected Entry rate"
+      },
+      "series": [
+        "baseline",
+        "candidate",
+        "candidate continuous-Flat reference"
+      ],
+      "denominator": "Flat decisions before next successful Entry",
+      "source_names": [
+        "diagnostic_time_since_close_behavior_q.csv",
+        "continuous_flat_reference.csv"
+      ]
+    }
+  ],
+  "limitations": [
+    "Historical CSV are not included; supply authorized source data externally.",
+    "Only the 24 public report figures were regenerated; five unreferenced Phase-I figures are excluded.",
+    "Smoke learning/health graphs are not new candidate-performance evidence."
+  ]
+}

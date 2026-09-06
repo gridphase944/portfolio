@@ -1,0 +1,236 @@
+{
+  "scope": "Public derivatives, not an exact historical source closure.",
+  "core_semantic_change": 0,
+  "report_tooling_is_not_training_source": true,
+  "missing_original_versions": "Some earlier baseline/lag source versions are not fully reconstructible; no exact historical rerun guarantee.",
+  "files": [
+    {
+      "public_path": "scripts/generate_graphs.py",
+      "provenance": "PUBLIC_ADAPTER_OR_PACKAGE_GLUE"
+    },
+    {
+      "public_path": "scripts/run_experiment.py",
+      "provenance": "PUBLIC_ADAPTER_OR_PACKAGE_GLUE"
+    },
+    {
+      "public_path": "src/features/__init__.py",
+      "provenance": "PUBLIC_ADAPTER_OR_PACKAGE_GLUE"
+    },
+    {
+      "public_path": "src/features/state_candidate_features_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/features/state_vector_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/features/timestamp_preprocess_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/trading_env/__init__.py",
+      "provenance": "PUBLIC_ADAPTER_OR_PACKAGE_GLUE"
+    },
+    {
+      "public_path": "src/trading_env/env_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/trading_env/execution_closingrisk_v02.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/trading_env/execution_latency_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/trading_env/reward_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/trading_env/state_builder_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/training/__init__.py",
+      "provenance": "PUBLIC_ADAPTER_OR_PACKAGE_GLUE"
+    },
+    {
+      "public_path": "src/training/agent_history_observability_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/training/close_auxiliary_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/ddqn_backup_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/dqn_loss_helper_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/dqn_target_helper_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/episode_replay_admission_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/epsilon_scheduler_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/historical_graphs.py",
+      "provenance": "REPORT_TOOLING_LATER_VERSION",
+      "adaptation": "only path/freeze metadata and public save_graph adapter",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/phase1_graphs.py",
+      "provenance": "LOCAL_REPORT_TOOLING",
+      "adaptation": "two required plot blocks; excluded other figures and internal orchestration",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/public_dataset.py",
+      "provenance": "PUBLIC_ADAPTER_OR_PACKAGE_GLUE"
+    },
+    {
+      "public_path": "src/training/public_graphs.py",
+      "provenance": "PUBLIC_ADAPTER_OR_PACKAGE_GLUE"
+    },
+    {
+      "public_path": "src/training/public_observability.py",
+      "provenance": "PUBLIC_ADAPTER_OR_PACKAGE_GLUE"
+    },
+    {
+      "public_path": "src/training/q_input_adapter_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/training/q_network_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/replay_buffer_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/rl_representation_e0_runner_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "new public subset, unchanged semantic bodies; excluded private orchestration was never installed",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/training/rl_representation_integration_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/training/rl_representation_observability_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/rl_representation_replay_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/training/rl_representation_rollout_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/training/seed_utils_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/state_normalizer_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "src/training/target_network_utils_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "src/training/train_finite_gate_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "historical dependency copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "tests/test_ddqn_backup_v01.py",
+      "provenance": "HISTORICAL_DEPENDENCY",
+      "adaptation": "focused test copy",
+      "L23_freeze_match_of_original": false
+    },
+    {
+      "public_path": "tests/test_lag1_agent_transition_context_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "focused test copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "tests/test_lag2_lag3_agent_transition_context_v01.py",
+      "provenance": "L23_RUN_SOURCE",
+      "adaptation": "focused test copy",
+      "L23_freeze_match_of_original": true
+    },
+    {
+      "public_path": "tests/test_public_entrypoint.py",
+      "provenance": "PUBLIC_ADAPTER_OR_PACKAGE_GLUE"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# 学習・評価で使用するモデルとNumPyデータ
+*.keras
+*.npy
+DQN/OCR_Result_Numpy/
+DQN/OCR_Result_Numpy_Backtest/
+DQN/TrainingModel/
+DQN/model/
+
+# 実行時のログ・進捗情報
+*.log
+NG.txt
+episord.txt
+
+# DQN.pyが生成する日時形式の出力ディレクトリ
+DQN/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]_[0-9][0-9][0-9][0-9][0-9][0-9]/
+*.h5
+*.jpg
+*.jpeg
